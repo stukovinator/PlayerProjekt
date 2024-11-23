@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls.Material3;assembly=Plugin.MaterialDesignControls"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="PlayerProjekt.MainPage">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <material:MaterialTopAppBar BackgroundColor="#1b5ef5" HorizontalOptions="Fill" Margin="0" Grid.Row="0" Padding="50, 0, 0, 0">
+            <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.logo1.svg" Scale="2.5"/>
+        </material:MaterialTopAppBar>
+
+        <ScrollView x:Name="Scroll" Grid.Row="1" VerticalScrollBarVisibility="Never" Margin="0">
+            <StackLayout Padding="20, 5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <material:MaterialLabel Text="Witaj w KPlayer! Odtwarzaj pliki lokalne przez przeszkód. Dodaj pliki używając przycisku." FontFamily="JosefinSansMedium" Type="TitleMedium" HorizontalTextAlignment="Center" Grid.Column="0"/>
+                    <material:MaterialIconButton Grid.Column="1" BackgroundColor="#1b5ef5">
+                        <Grid>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Play_Tapped"/>
+                            </Grid.GestureRecognizers>
+                            <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.playlist_add.svg" HeightRequest="24" WidthRequest="24"/>
+                        </Grid>
+
+                    </material:MaterialIconButton>
+                </Grid>
+                <material:MaterialDivider/>
+
+                <StackLayout x:Name="AddedFiles">
+                    <material:MaterialCard Type="Filled" BackgroundColor="#eef6ff" Padding="5" ClassId="paused">
+                        <StackLayout Orientation="Horizontal">
+                            <Frame CornerRadius="6" BackgroundColor="White" WidthRequest="24" HeightRequest="24">
+                                <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.audio.svg"/>
+                            </Frame>
+                            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="5, 0, 0, 0">
+                                <Label Text="TYTUL 1" TextColor="#142357" FontSize="Large" FontFamily="JosefinSansBold"/>
+                                <Label Text="AUTOR 1" TextColor="#142357" FontSize="Large" FontFamily="JosefinSansRegular"/>
+                            </StackLayout>
+                            <material:MaterialIconButton>
+                                <Grid>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Play_Tapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.play_circle_filled.svg" HeightRequest="24" WidthRequest="24"/>
+                                </Grid>
+                                
+                            </material:MaterialIconButton>
+                        </StackLayout>
+                    </material:MaterialCard>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>
