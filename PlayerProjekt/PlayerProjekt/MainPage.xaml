@@ -36,43 +36,7 @@
                 <material:MaterialDivider/>
 
                 <StackLayout x:Name="AddedFiles">
-                    <material:MaterialCard Type="Filled" BackgroundColor="#eef6ff" Padding="5" ClassId="kazior.mp4" IsVisible="False">
-                        <StackLayout Orientation="Horizontal">
-                            <Frame CornerRadius="6" BackgroundColor="White" WidthRequest="24" HeightRequest="24">
-                                <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.audio.svg"/>
-                            </Frame>
-                            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="5, 0, 0, 0">
-                                <Label Text="TYTUL 1" TextColor="#142357" FontSize="Large" FontFamily="JosefinSansBold"/>
-                                <Label Text="AUTOR 1" TextColor="#142357" FontSize="Large" FontFamily="JosefinSansRegular"/>
-                            </StackLayout>
-                            <material:MaterialIconButton>
-                                <Grid>
-
-                                    <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.play_circle_filled.svg" HeightRequest="24" WidthRequest="24"/>
-                                </Grid>
-                                
-                            </material:MaterialIconButton>
-                        </StackLayout>
-                    </material:MaterialCard>
-
-                    <material:MaterialCard Type="Filled" BackgroundColor="#eef6ff" Padding="5" ClassId="Onassis.mp3" IsVisible="False">
-                        <StackLayout Orientation="Horizontal">
-                            <Frame CornerRadius="6" BackgroundColor="White" WidthRequest="24" HeightRequest="24">
-                                <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.audio.svg"/>
-                            </Frame>
-                            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="5, 0, 0, 0">
-                                <Label Text="TYTUL 2" TextColor="#142357" FontSize="Large" FontFamily="JosefinSansBold"/>
-                                <Label Text="AUTOR 2" TextColor="#142357" FontSize="Large" FontFamily="JosefinSansRegular"/>
-                            </StackLayout>
-                            <material:MaterialIconButton>
-                                <Grid>
-
-                                    <ffimageloadingsvg:SvgCachedImage Source="resource://PlayerProjekt.Resources.play_circle_filled.svg" HeightRequest="24" WidthRequest="24"/>
-                                </Grid>
-
-                            </material:MaterialIconButton>
-                        </StackLayout>
-                    </material:MaterialCard>
+                    
                 </StackLayout>
             </StackLayout>
         </ScrollView>
