@@ -55,8 +55,14 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.MaterialDesignControls">
       <Version>3.1.8</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.MediaManager">
+      <Version>1.1.1</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp">
       <Version>2.88.8</Version>

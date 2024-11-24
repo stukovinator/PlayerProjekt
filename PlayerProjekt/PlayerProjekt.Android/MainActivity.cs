@@ -1,11 +1,11 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using FFImageLoading.Forms.Platform;
 using FFImageLoading.Svg.Forms;
+using MediaManager;
 
 namespace PlayerProjekt.Droid
 {
@@ -18,6 +18,7 @@ namespace PlayerProjekt.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CrossMediaManager.Current.Init(this);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             CachedImageRenderer.Init(true);
             LoadApplication(new App());
